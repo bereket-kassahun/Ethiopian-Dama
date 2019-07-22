@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ManuActivity"
+            android:name=".MenuActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
           <intent-filter>

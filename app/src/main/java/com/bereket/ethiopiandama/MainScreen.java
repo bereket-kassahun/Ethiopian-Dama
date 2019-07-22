@@ -88,7 +88,7 @@ public class MainScreen extends AppCompatActivity {
 
     private void launchMain() {
         preferenceManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(MainScreen.this, ManuActivity.class));
+        startActivity(new Intent(MainScreen.this, MenuActivity.class));
         finish();
     }
 

@@ -2,7 +2,6 @@ package com.bereket.ethiopiandama
 
 import android.app.Activity
 import android.app.AlertDialog
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Paint
@@ -12,9 +11,6 @@ import android.util.DisplayMetrics
 import android.view.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import java.lang.StringBuilder
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import android.media.Image
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
@@ -26,10 +22,6 @@ import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
 
 import java.util.*
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
-
 
 
 enum class Mode{
@@ -119,7 +111,6 @@ class MainActivity : Activity(){
                             if(((box[i].x < event.x &&  box[i].width.plus(box[i].x) > event.x)) && (box[i].y < event.y &&  box[i].width.plus(box[i].y) > event.y)){
                                 temp = box[i]
 
-//                            Toast.makeText(this, " " + temp.x, Toast.LENGTH_SHORT).show()
                             }
                         }
                     }
@@ -127,32 +118,21 @@ class MainActivity : Activity(){
                         for(i in 0..2){
                             if(((box[i].x < event.x &&  box[i].width.plus(box[i].x) > event.x)) && (box[i].y < event.y &&  box[i].width.plus(box[i].y) > event.y)){
                                 temp = box[i]
-//                            Toast.makeText(this, " " + temp.x, Toast.LENGTH_SHORT).show()
                             }
                         }
                     }
-//                    for(b: Box in box) {
-//                        if(((b.x < event.x &&  b.width.plus(b.x) > event.x)) && (b.y < event.y &&  b.width.plus(b.y) > event.y)){
-//                            temp = b
-////                            Toast.makeText(this, " " + temp.x, Toast.LENGTH_SHORT).show()
-//                        }
 
-
-//                    }
                     pointX = event.x
                     pointY = event.y
 
-//                Toast.makeText(context, event.x.toString() + ' ' + event.y.toString(), Toast.LENGTH_SHORT).show()
                 }
                 MotionEvent.ACTION_UP -> {
 
-//                    Toast.makeText(this, " " + temp.x, Toast.LENGTH_SHORT).show()
                     point2X = event.x
                     point2Y = event.y
 
                     var proceed = false
                     for(i in 0..5){
-//                        Toast.makeText(this,"heloo", Toast.LENGTH_SHORT).show()
                         try {
                             if(temp.equals(box[i]))
                                 proceed = true
@@ -163,8 +143,6 @@ class MainActivity : Activity(){
 
                     }
                     if(proceed){
-//                        Toast.makeText(this,"heloo", Toast.LENGTH_SHORT).show()
-
                         temp.customAnimator(temp.calculateAngle((point2X - pointX).toDouble(), (point2Y - pointY).toDouble()), board, turn, mode)
                         temp = other
                     }
@@ -173,8 +151,6 @@ class MainActivity : Activity(){
             }
                 return false
         }
-//        Toast.makeText(this, "i was called", Toast.LENGTH_SHORT).show()
-//        return super.onTouchEvent(event)
 
     private val mAppUnitId: String = "ca-app-pub-6470629710309760~6150625555"
 
@@ -200,15 +176,13 @@ class MainActivity : Activity(){
 
         mInterstitialAd.adListener = object : AdListener() {
 
-            // If user clicks on the ad and then presses the back, s/he is directed to DetailActivity.
             override fun onAdClicked() {
                 super.onAdOpened()
                 mInterstitialAd.adListener.onAdClosed()
             }
 
-            // If user closes the ad, s/he is directed to DetailActivity.
             override fun onAdClosed() {
-                startActivity(Intent(this@MainActivity, ManuActivity::class.java))
+                startActivity(Intent(this@MainActivity, MenuActivity::class.java))
                 finish()
             }
         }
@@ -221,7 +195,6 @@ class MainActivity : Activity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.board)
 
-        //ad section
 
 
         mInterstitialAd = InterstitialAd(this)
@@ -245,19 +218,6 @@ class MainActivity : Activity(){
             mode = Mode.MULTI_PLAYER
         
         init()
-
-//        ObjectAnimator.ofFloat(box, View.X, box.x, box.x + 100f).apply {
-//            duration = 1000
-//            start()
-//        }
-
-
-        // drawing the lines
-
-        //this is where the ai code should go (using the minimax, remember to )
-
-
-
     }
     class Board{
         var positions = intArrayOf(0,0,0,0,0,0,0,0,0)
@@ -308,13 +268,9 @@ class MainActivity : Activity(){
     }
 
     private fun init(){
-//        mode = Mode.MULTI_PLAYER
-
-
         builder = AlertDialog.Builder(this)
         val inflater = layoutInflater.inflate(R.layout.game_over,null)
         gameOverTitle = inflater.findViewById<TextView>(R.id.title)
-//        winnerIndicator = inflater.findViewById<TextView>(R.id.title)
         val replay = inflater.findViewById<ImageView>(R.id.replay)
         val menu = inflater.findViewById<ImageView>(R.id.menu)
         replay.setOnClickListener {
@@ -384,11 +340,7 @@ class MainActivity : Activity(){
 
 
         val rect1 = Rect(50, 50, 150, 150)
-        val rect2 = Rect(dpWidth/2-50, 50, dpWidth+50, 150)
-        val rect3 = Rect(dpWidth-150, 50, dpWidth-50, 150)
-        val rect4 = Rect(50, dpHeight-150, 150, dpHeight-50)
-        val rect5 = Rect(dpWidth/2-50, dpHeight-150, dpWidth/2+50, dpHeight-50)
-        val rect6 = Rect(dpWidth-150, dpHeight-150, dpWidth-50, dpHeight-50)
+
         val paint = Paint()
         paint.setARGB(255, 255, 0, 0)
 
@@ -412,9 +364,6 @@ class MainActivity : Activity(){
         box[5] = Box(this, rect1, paint1, dpWidth.toFloat(), dpHeight.toFloat(),dpWidth-200f, dpHeight-200f,8)
 
 
-//        val lp = ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT, ConstraintLayout.LayoutParams.WRAP_CONTENT)
-//        lp.setMargins(10,20,0,0)
-//        box.layoutParams = lp
         val parameter = ViewGroup.LayoutParams(200,200)
         constraintLayout.addView(box[0],parameter)
         constraintLayout.addView(box[1],parameter)
@@ -462,7 +411,7 @@ class MainActivity : Activity(){
         if(mInterstitialAd.isLoaded)
             mInterstitialAd.show()
         else{
-            val intent = Intent(this, ManuActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -471,7 +420,6 @@ class MainActivity : Activity(){
 
 
     private fun undoGame() {
-//        Toast.makeText(this, "undo", Toast.LENGTH_SHORT).show()
    Log.e("size", boards.size.toString())
         if((boards.size - counters) <= 0 || counters < 0)
             return
@@ -499,9 +447,6 @@ class MainActivity : Activity(){
         box?.y = positions[e*2+1]
         box?.index = e
 
-//        box!!.animator(positions[e*2],positions[e*2+1],board,turn,mode)
-//        Log.e("------------",  " "+ positions[e*2] )
-//        Log.e("------------",  " "+ positions[e*2+1] )
     }
     private fun moveBoxes(b: Board, lastBoard: Board){
         var init1:Int = 0

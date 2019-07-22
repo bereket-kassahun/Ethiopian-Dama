@@ -8,16 +8,12 @@ import android.graphics.Rect
 import android.util.Log
 
 
-import android.view.MotionEvent
 import android.view.View
 
 
 import androidx.dynamicanimation.animation.DynamicAnimation
 import androidx.dynamicanimation.animation.SpringAnimation
-import androidx.fragment.app.DialogFragment
 import java.util.*
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
 
 
 fun View.spring(property: DynamicAnimation.ViewProperty): SpringAnimation{

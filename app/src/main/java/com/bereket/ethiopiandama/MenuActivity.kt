@@ -3,30 +3,25 @@ package com.bereket.ethiopiandama
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
-import android.content.res.Configuration
-import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
 
-import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.TextView
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.Group
 
-import com.nightonke.boommenu.BoomButtons.BoomButton
 import com.nightonke.boommenu.BoomButtons.HamButton
 import com.nightonke.boommenu.BoomMenuButton
 
 import java.util.Locale
 
 
-class ManuActivity : AppCompatActivity() {
+class MenuActivity : AppCompatActivity() {
 
     var localeCode = ""
 
@@ -35,14 +30,11 @@ class ManuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
-
         val preferenceManager = PreferenceManager(this)
         if(!preferenceManager.LastLanguage().equals("default"))
             changeLocale(preferenceManager.LastLanguage())
 
         val webView = findViewById<WebView>(R.id.myWebView);
-//        val webSettings = webView.settings
-//        webSettings.javaScriptEnabled = true
         webView.webViewClient =  WebViewClient()
         webView.loadUrl("file:///android_asset/index.html")
 
@@ -101,7 +93,7 @@ class ManuActivity : AppCompatActivity() {
     fun help() {
         val preferenceManager = PreferenceManager(applicationContext)
         preferenceManager.setFirstTimeLaunch(true)
-        startActivity(Intent(this@ManuActivity, MainScreen::class.java))
+        startActivity(Intent(this@MenuActivity, MainScreen::class.java))
         finish()
     }
 
@@ -187,7 +179,7 @@ class ManuActivity : AppCompatActivity() {
 
                 }
 
-                val intent = Intent(this@ManuActivity, MainActivity::class.java)
+                val intent = Intent(this@MenuActivity, MainActivity::class.java)
                 intent.putExtra("difficulty", returnValue.`val`)
                 intent.putExtra("mode", 1)
                 startActivity(intent)
@@ -197,7 +189,7 @@ class ManuActivity : AppCompatActivity() {
         return 0
     }
     public fun multiPlayer(){
-        val intent = Intent(this@ManuActivity, MainActivity::class.java)
+        val intent = Intent(this@MenuActivity, MainActivity::class.java)
         intent.putExtra("mode", 2)
         startActivity(intent)
         finish()

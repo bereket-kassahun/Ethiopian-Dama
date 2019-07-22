@@ -1,19 +1,5 @@
 package com.bereket.ethiopiandama
 
-import android.util.Log
-import android.widget.Toast
-
-
-
-
-class alpha{
-    var alpha: Int = 0
-}
-class beta{
-    var beta: Int = 0
-}
-
-
 object Utils {
     val dp_height = MainActivity.height.toFloat()
     val dp_width = MainActivity.width.toFloat()

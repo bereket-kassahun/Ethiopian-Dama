@@ -18,6 +18,7 @@ class Line(context: Context?): View(context) {
         this.strokeWidth = 10.0f
         this.color = Color.rgb(34,177,76)
     }
+
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
         canvas?.drawLine(points[0],points[1],points[2],points[3],paint)
