@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Dama</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+
+    <string name="slide_1_title">How to play?</string>
+    <string name="slide_1_desc">Move your boxes like that</string>
+
+    <string name="slide_2_title">Your team</string>
+    <string name="slide_2_desc">When playing against the AI/mobile your team color is blue, the player starts the game</string>
+
+    <string name="slide_3_title">How to win?</string>
+    <string name="slide_3_desc">To win the game place all of your boxes on one of the lines</string>
+
+
+
+    <string name="singlePlayer">Single Player</string>
+    <string name="multiPlayer">Multi Player</string>
+    <string name="language">Language</string>
+    <string name="help">Help</string>
+    <string name="exit">Exit</string>
+
+
+    <string name="levelTitle">Choose Level</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+
+
+    <string name="languageTitle">Language</string>
+    <string name="english">English</string>
+    <string name="amharic">ኣማርኛ</string>
+    <string name="oromic">Oromiffa</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <string name="gameOver">Game Over</string>
+</resources>

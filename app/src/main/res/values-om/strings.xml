@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Daamaa</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">DABARSI</string>
+    <string name="skip">CUFII</string>
+    <string name="start">Naaf gale</string>
+
+
+    <string name="slide_1_title">How to play?</string>
+    <string name="slide_1_desc">taphattoota kee demsisuuf akkas godhi</string>
+
+    <string name="slide_2_title">Your team</string>
+    <string name="slide_2_desc">mobaayili wajjiin yeroo taphattanuu gareen cuqulisni kan kessani, jalqaba kan deemus isini </string>
+
+    <string name="slide_3_title">How to win?</string>
+    <string name="slide_3_desc">taphicha moo\'uf taphattoota kessan sarara tokko irratti ka\'aa</string>
+
+    <string name="singlePlayer">Tapha qofaa</string>
+    <string name="multiPlayer">Tapha waliinii</string>
+    <string name="language">Afaan</string>
+    <string name="help">Gargaarsa</string>
+    <string name="exit">Cufii</string>
+
+    <string name="levelTitle">Sadarkaa filadhu</string>
+    <string name="easy">Salphaa</string>
+    <string name="medium">Giddu Galessa</string>
+    <string name="hard">Cimaa</string>
+
+    <string name="languageTitle">Afaan</string>
+    <string name="english">English</string>
+    <string name="amharic">ኣማርኛ</string>
+    <string name="oromic">Oromiffa</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Deebi\'i taphadhu</string>
+
+    <string name="gameOver">Taphni Dhume</string>
+</resources>

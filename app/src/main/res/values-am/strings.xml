@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">ዳማ</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">ቀጣይ</string>
+    <string name="skip">መዝለል</string>
+    <string name="start">ገባኝ</string>
+
+
+    <string name="slide_1_title">How to play?</string>
+    <string name="slide_1_desc">ሳጥኖቹን እንደዚ ያንቀሳቅሱ</string>
+
+    <string name="slide_2_title">Your team</string>
+    <string name="slide_2_desc">ከኤአይአይ / በሞባይል ጋር ሲጫወቱ የቡድንዎ ቀለም ሰማያዊ ነው:: ጀማሪ ተጫዋቹ ነው  </string>
+
+    <string name="slide_3_title">How to win?</string>
+    <string name="slide_3_desc">ጨዋታውን ለማሸነፍ ሳጥኖችዎን በአንድ መስመር ላይ ያኑሩ</string>
+
+
+    <string name="singlePlayer">ነጠላ ጨዋታ</string>
+    <string name="multiPlayer">ለሁለት ጨዋታ</string>
+    <string name="language">ቋንቋ</string>
+    <string name="help">እገዛ</string>
+    <string name="exit">ውጣ</string>
+
+
+
+    <string name="levelTitle">ደረጃ ይምረጡ</string>
+    <string name="easy">ቀላል</string>
+    <string name="medium">መካከለኛ</string>
+    <string name="hard">ከባድ</string>
+
+    <string name="languageTitle">ቋንቋ</string>
+    <string name="english">English</string>
+    <string name="amharic">ኣማርኛ</string>
+    <string name="oromic">Oromiffa</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">በድጋሚ ተጫወት</string>
+
+    <string name="gameOver">ጨዋታው አለቀ</string>
+</resources>

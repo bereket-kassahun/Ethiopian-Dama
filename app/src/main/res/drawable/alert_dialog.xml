@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/undo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_undo_black_24dp"
+        android:layout_gravity="start"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/replay"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_replay_black_24dp"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/mainMenu"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_menu_black_24dp"/>
+
+</LinearLayout>
