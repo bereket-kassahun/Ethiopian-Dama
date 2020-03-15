@@ -14,4 +14,4 @@ This game uses minmax algorithm with alpha beta purning, and it is found in util
 		3.Hard :- Unbeatable
 	
 
-![Help](help.gif)  ![HOW TO PLAY](how_to_play.gif)
+![Help](help.gif)  ![HOW TO PLAY](how_to_play.gif)  ![CHANGE LANGUGAGE](change_language.gif)
